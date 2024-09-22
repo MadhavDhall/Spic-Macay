@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIC MACAY Style Carousel with Dots and Arrows</title>
+
+    <!-- Add Bootstrap CSS for basic styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            /* Ensure the container has relative positioning */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Center the content */
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item-custom {
+            min-width: 300px;
+            /* Adjust width */
+            margin-right: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .carousel-item-custom img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Position the arrows above the cards */
+        .carousel-controls {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            z-index: 1000;
+            /* Ensure buttons are above the carousel */
+        }
+
+        .prev-btn,
+        .next-btn {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 50%;
+        }
+
+        .carousel-controls button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Dots (Pagination indicators) */
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .carousel-indicators button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .carousel-indicators button.active {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="carousel-container">
+        <div class="carousel-wrapper" id="carouselWrapper">
+            <div class="carousel-item-custom">
+                <img src="your-image1.jpg" alt="Card 1">
+                <div class="card-body">
+                    <h5 class="card-title">Card Title 1</h5>
+                    <p class="card-text">Description for card 1.</p>
+                </div>
+            </div>
+            <div class="carousel-item-custom">
+                <img src="your-image2.jpg" alt="Card 2">
+                <div class="card-body">
+                    <h5 class="card-title">Card Title 2</h5>
+                    <p class="card-text">Description for card 2.</p>
+                </div>
+            </div>
+            <div class="carousel-item-custom">
+                <img src="your-image3.jpg" alt="Card 3">
+                <div class="card-body">
+                    <h5 class="card-title">Card Title 3</h5>
+                    <p class="card-text">Description for card 3.</p>
+                </div>
+            </div>
+            <div class="carousel-item-custom">
+                <img src="your-image4.jpg" alt="Card 4">
+                <div class="card-body">
+                    <h5 class="card-title">Card Title 4</h5>
+                    <p class="card-text">Description for card 4.</p>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+
+        <!-- Carousel Controls (Above Cards) -->
+        <div class="carousel-controls">
+            <button class="prev-btn" onclick="moveCarousel(-1)">&#10094;</button>
+            <button class="next-btn" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="carousel-indicators">
+            <button class="active" onclick="moveToSlide(0)"></button>
+            <button onclick="moveToSlide(1)"></button>
+            <button onclick="moveToSlide(2)"></button>
+            <button onclick="moveToSlide(3)"></button>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const carouselWrapper = document.getElementById('carouselWrapper');
+        const totalItems = carouselWrapper.children.length;
+        let currentIndex = 0;
+
+        function moveCarousel(direction) {
+            const itemWidth = document.querySelector('.carousel-item-custom').offsetWidth + 20; // Width of each card + margin
+            const wrapperWidth = document.querySelector('.carousel-container').offsetWidth;
+            const visibleItems = Math.floor(wrapperWidth / itemWidth);
+            const maxIndex = totalItems - visibleItems; // Don't let it show empty space after last card
+
+            if (direction === 1 && currentIndex < maxIndex) {
+                currentIndex++;
+            } else if (direction === -1 && currentIndex > 0) {
+                currentIndex--;
+            }
+
+            updateCarousel();
+        }
+
+        function moveToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const itemWidth = document.querySelector('.carousel-item-custom').offsetWidth + 20; // Width of each card + margin
+            carouselWrapper.style.transform = `translateX(${-itemWidth * currentIndex}px)`;
+
+            // Update active dot
+            const indicators = document.querySelectorAll('.carousel-indicators button');
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+    </script>
+
+</body>
+
+</html>

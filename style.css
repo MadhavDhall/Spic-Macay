@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: rgb(233, 233, 233);
+}
+
+.nav-link {
+    color: black;
+}
+
+.active {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.logo {
+    height: 80px;
+}
+
+.card-img-top {
+    max-width: 140px;
+}
+
+.footer-logo {
+    height: 170px;
+}
+
+.event-card {
+    border: 4px rgb(106, 103, 103) solid;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px rgb(205, 204, 204);
+}
+
+.faq-item {
+    border-bottom: #EBCF7E solid 1px;
+}
+
+.faq-answer {
+    color: #666;
+}
+
+.card-text-event {
+    font-size: 18px;
+}
+
+footer {
+    min-height: 100vh;
+    margin-top: auto;
+}
+
+/* carasoul  */
+/* li{
+    list-style: none;
+    padding: 1.5vw;
+    padding-right: 4vw;
+}
+ul{
+    display: flex;
+    justify-content:flex-end;
+    position: relative;
+}
+.line{
+    background-color:gray ;
+    
+} */
+* {
+    font-family: sans-serif;
+    color: black;
+
+}
+
+#h {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(233, 233, 233);
+}
+
+.heading {
+    display: flex;
+    margin-left: 7%;
+    margin-right: 8%;
+    height: 50px;
+    background-color: rgb(233, 233, 233);
+}
+
+#logo {
+    width: 40%;
+    background-color: rgb(233, 233, 233);
+}
+
+#logo img {
+    height: 80px;
+    margin-top: 10px;
+    background-color: rgb(233, 233, 233);
+}
+
+.link {
+    margin-top: 3%;
+    margin-left: 5%;
+    width: 10%;
+    background-color: rgb(233, 233, 233);
+}
+
+.link a {
+    text-decoration: none;
+    background-color: rgb(233, 233, 233);
+}
+
+#home {
+    margin-top: 3%;
+    margin-left: 5%;
+    width: 10%;
+    background-color: rgb(233, 233, 233);
+}
+
+#home a {
+    text-decoration: underline;
+    font-weight: bolder;
+    background-color: rgb(233, 233, 233);
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    margin-bottom: 5vw;
+}
+
+.topdiv {
+    padding-top: 12vh;
+    width: 50vw;
+    display: inline-block;
+    margin-bottom: 4vw;
+}
+
+.vectorimg {
+    display: inline-block;
+    width: 35vw;
+    height: 30vh;
+}
+
+.line_2 {
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-top: 6vh;
+    height: 1.5px;
+    background-color: gray;
+}
+
+.innerdiv {
+    width: 70vw;
+}
+
+.outer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circleimg {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+}
+
+.outermost {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.line_3 {
+    margin-top: 6vh;
+    height: 1px;
+    background-color: gray;
+}
+
+.eventscontainer {
+    display: flex;
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upcomingeventimg {
+    width: 25vw;
+    height: 30vw;
+}
+
+.upcomingeventinnerdiv {
+    width: 55vw;
+}
+
+.fas {
+    font-size: 2vw;
+}
+
+.arrowcontainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+}
+
+.slidercontainer {
+    margin-bottom: 8vh;
+}
+
+.allimages {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.allimages .imagecontainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    flex: none;
+    margin-left: 10px;
+}
+
+.allimages::-webkit-scrollbar {
+    display: none;
+}
+
+.allimages #event1 {
+    height: 22.12px;
+    width: 22.12px;
+}
+
+.sliderimg {
+    width: 100%;
+}
+
+.arrowcontainerblog {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* padding-bottom: 2vh;
+    padding-top: 2vh; */
+}
+
+.allblogs {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.blogcontainer {
+    display: flex;
+    /* margin-top: 1vh;
+    margin-bottom: 1vh; */
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 3vh;
+}
+
+.allblogs .blogcontainer {
+    width: 100%;
+    flex: none;
+}
+
+.allblogs {
+    height: fit-content;
+}
+
+.blogimg {
+    width: 27vw;
+    /* height:25vw; */
+}
+
+.blogcontainer {
+    height: fit-content;
+}
+
+.bloginnerdiv {
+    height: fit-content;
+}
+
+.allblogs::-webkit-scrollbar {
+    display: none;
+}
+
+.facultycontainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 7vh;
+
+}
+
+.facultywords {
+    padding: 2vw;
+    text-align: center;
+    width: 20vw;
+    background-color: rgba(228, 82, 186, 0.174);
+}
+
+#end {
+    display: flex;
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+#images {
+    width: 70%;
+    display: flex;
+}
+
+#smlogo {
+    width: 382px;
+    height: 163px;
+    margin-right: 10%;
+}
+
+#other {
+    margin-top: 3%;
+    width: 277.875px;
+    height: 286.875px;
+}
+
+#links {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid black;
+    display: flex;
+}
+
+#links div {
+    width: 150%;
+}
+
+.socialmedia {
+    display: flex;
+}
+
+#linkedin img {
+    width: 7vw;
+}
+
+#insta img {
+    width: 5.4vw;
+    margin-top: 1vw;
+}
+
+
+@media screen and (max-width:540px) {
+    #h {
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    .heading {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
+
+    #logo {
+        width: 20%;
+        margin-left: 20px;
+    }
+
+    #logo img {
+        height: 25px;
+        margin-top: 10px;
+    }
+
+    .link {
+        margin-top: 10px;
+        width: fit-content;
+        margin-left: 5%;
+    }
+
+    .link a {
+        text-decoration: none;
+        font-size: 8px;
+    }
+
+    #home {
+        margin-top: 8px;
+        width: 60px;
+    }
+
+    #home a {
+        font-size: 8px;
+        margin-left: 8px;
+    }
+
+    #smlogo {
+        width: 95.5px;
+        height: 40.75px;
+        margin-right: 10%;
+    }
+
+    #other {
+        margin-top: 3%;
+        width: 61.75px;
+        height: 63.75px;
+    }
+
+    #footer p {
+        font-size: 8px;
+        width: 40%;
+    }
+
+    #links a {
+        font-size: 10px;
+    }
+
+    .facultywords p {
+        font-size: 10px;
+    }
+
+    #images {
+        width: 40%;
+        display: flex;
+        margin-bottom: 0%;
+    }
+
+    #end {
+        display: block;
+    }
+
+    #images img {
+        margin-left: 40%;
+    }
+
+    #footer {
+        margin-left: 25%;
+        text-align: center;
+        text-decoration: none;
+        width: 200px;
+        margin-top: 0px;
+    }
+
+    #footer div {
+        font-size: 10px;
+        height: 0px;
+    }
+
+    #footer img {
+        width: 20px;
+    }
+
+    #links {
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    #links div {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width:540px) and (max-width:1050px) {
+
+    #h {
+        height: 80px;
+        margin-bottom: 15px;
+    }
+
+    .heading {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+    }
+
+    #logo {
+        width: 20%;
+        margin-left: 15px;
+    }
+
+    #logo img {
+        height: 40px;
+        margin-top: 20px;
+    }
+
+    .link {
+        margin-top: 30px;
+        width: fit-content;
+        margin-left: 5%;
+    }
+
+    .link a {
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    #home {
+        margin-top: 30px;
+        width: 80px;
+    }
+
+    #home a {
+        font-size: 12px;
+    }
+
+    #end {
+        display: block;
+    }
+
+    #images img {
+        margin-left: 20%;
+    }
+
+    #footer {
+        margin-left: 25%;
+        text-align: center;
+        width: 250px;
+        margin-top: 0px;
+    }
+
+    #footer div {
+        font-size: 15px;
+        height: 0px;
+    }
+
+    #footer img {
+        width: 30px;
+    }
+
+    #links {
+        margin-top: 50px;
+        width: 100%;
+        text-decoration: none;
+    }
+
+    #links div {
+        width: 200px;
+        text-decoration: none;
+    }
+
+    #links a {
+        text-decoration: none;
+    }
+
+    #smlogo {
+        width: 191px;
+        height: 81.5px;
+        margin-right: 2%;
+    }
+
+    #other {
+        margin-top: 3%;
+        width: 123.5px;
+        height: 127.55px;
+    }
+
+}
