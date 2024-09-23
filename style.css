@@ -60,26 +60,8 @@ footer {
 }
 
 /* carasoul  */
-/* li{
-    list-style: none;
-    padding: 1.5vw;
-    padding-right: 4vw;
-}
-ul{
-    display: flex;
-    justify-content:flex-end;
-    position: relative;
-}
-.line{
-    background-color:gray ;
-    
-} */
-* {
-    font-family: sans-serif;
-    color: black;
-
-}
-
+/* down css for carasoul from original website due to less time copied carasoul from main site  */
+/* there were many tasks therefore i copied carasoul rest is made by me :)  */
 #h {
     height: 100px;
     width: 100%;
